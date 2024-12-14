@@ -98,15 +98,78 @@ Explanation: This builds the Docker image and runs the project in a containerize
 
 
 
-## 🤝 Contributing
-Contributions are welcome!
-To contribute:
+## 📌 API Endpoints
+### 1. Trigger Management
 
-#### Fork the repository.
-Create a new branch: git checkout -b feature/your-feature-name.
-Commit your changes: git commit -m "Add some feature".
-Push to the branch: git push origin feature/your-feature-name.
-Submit a pull request.
+        Create a Trigger
+            Method: POST
+            Endpoint: /api/triggers/
+            Description: Add a new trigger.
+            Payload Example:
+            json
+            {
+              "name": "Daily Backup",
+              "trigger_type": "schedule",
+              "schedule_time": "2024-06-15T10:00:00",
+              "interval_seconds": 86400,
+              "api_payload": {"key": "value"}
+            }
+            
+Retrieve All Triggers
+
+            Method: GET
+            Endpoint: /api/triggers/
+            Description: Fetch all triggers.
+            
+Retrieve Trigger by ID
+
+            Method: GET
+            Endpoint: /api/triggers/{trigger_id}
+            Description: Get a specific trigger by ID.
+            
+Update a Trigger
+
+            Method: PUT
+            Endpoint: /api/triggers/{trigger_id}
+            Description: Update an existing trigger.
+            
+##### Payload Example:
+            json
+            {
+              "name": "Updated Trigger Name",
+              "interval_seconds": 3600
+            }
+            
+Delete a Trigger
+
+            Method: DELETE
+            Endpoint: /api/triggers/{trigger_id}
+            Description: Delete a trigger by ID.
+            
+### 2. Event Logs Management
+ Retrieve Active Event Logs
+
+              Method: GET
+              Endpoint: /api/event_logs/
+              Description: Fetch logs that are currently active.
+              
+  Retrieve Archived Event Logs
+
+              Method: GET
+              Endpoint: /api/event_logs/archived
+              Description: Fetch logs that are archived.
+              
+  Delete Expired Event Logs
+
+             Method: DELETE
+             Endpoint: /api/event_logs/expired
+             Description: Remove logs that have expired.
+        
+### 3. Health Check
+         Check API Status
+           Method: GET
+           Endpoint: /
+           Description: A simple endpoint to confirm that the API is running.
 
 ## 📧 Contact
 If you have any questions, feel free to reach out:
