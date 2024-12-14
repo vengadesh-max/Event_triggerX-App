@@ -39,14 +39,14 @@
 
 ## Step 1: Clone the Repository
             Download the project source code to your local system.
-             = > bash
+            
             git clone https://github.com/vengadesh-max/Event_triggerX-App.git
             cd Event_TriggerX
 Explanation: The git clone command copies the project from GitHub, and cd navigates to the project directory.
 ## Step 2: Create a Virtual Environment
             Set up an isolated Python environment for the project dependencies.
-             = > bash
-             For Linux/Mac
+            
+## For Linux/Mac
             python -m venv venv
             source venv/bin/activate
 
@@ -56,30 +56,30 @@ Explanation: The git clone command copies the project from GitHub, and cd naviga
 Explanation:
 python -m venv venv creates a virtual environment named venv.
 source (Linux/Mac) or venv\Scripts\activate (Windows) activates the environment.
+
 ## Step 3: Install Dependencies
             Install the required libraries and packages.
-             = > bash
             pip install -r requirements.txt
 Explanation: This command reads the requirements.txt file and installs all necessary dependencies for the project.
+
 ## Step 4: Set Up the Database
             Initialize the database to ensure proper setup.
-             = > bash
             python -c "from app.database import init_db; init_db()"
 Explanation: This runs a script to set up the database tables and structure (using SQLite or any configured database).
+
 ## Step 5: Run the Application
             Start the FastAPI server in development mode.
-             = > bash
             uvicorn app.main:app --reload
 Explanation:
 uvicorn is the server that runs the FastAPI app.
 --reload automatically restarts the server upon file changes.
+
 ## Access the App:
 
             Swagger UI: http://127.0.0.1:8000/docs
             Redoc UI: http://127.0.0.1:8000/redoc
-## Step 6: Run with Docker (Optional)
+## Step 6: Run with Docker :
             If you prefer running the project in a Docker container:
-             = > bash
             docker-compose up --build
 Explanation: This builds the Docker image and runs the project in a containerized environment.
 
