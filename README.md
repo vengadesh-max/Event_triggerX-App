@@ -40,13 +40,13 @@
 ## Step 1: Clone the Repository
             Download the project source code to your local system.
              = > bash
-            git clone https://github.com/your_username/Event_TriggerX.git
+            git clone https://github.com/vengadesh-max/Event_triggerX-App.git
             cd Event_TriggerX
 Explanation: The git clone command copies the project from GitHub, and cd navigates to the project directory.
 ## Step 2: Create a Virtual Environment
             Set up an isolated Python environment for the project dependencies.
              = > bash
-            # For Linux/Mac
+             For Linux/Mac
             python -m venv venv
             source venv/bin/activate
 
@@ -58,17 +58,17 @@ python -m venv venv creates a virtual environment named venv.
 source (Linux/Mac) or venv\Scripts\activate (Windows) activates the environment.
 ## Step 3: Install Dependencies
             Install the required libraries and packages.
-            bash
+             = > bash
             pip install -r requirements.txt
 Explanation: This command reads the requirements.txt file and installs all necessary dependencies for the project.
 ## Step 4: Set Up the Database
             Initialize the database to ensure proper setup.
-            bash
+             = > bash
             python -c "from app.database import init_db; init_db()"
 Explanation: This runs a script to set up the database tables and structure (using SQLite or any configured database).
 ## Step 5: Run the Application
             Start the FastAPI server in development mode.
-            bash
+             = > bash
             uvicorn app.main:app --reload
 Explanation:
 uvicorn is the server that runs the FastAPI app.
@@ -79,11 +79,12 @@ uvicorn is the server that runs the FastAPI app.
             Redoc UI: http://127.0.0.1:8000/redoc
 ## Step 6: Run with Docker (Optional)
             If you prefer running the project in a Docker container:
-            bash
+             = > bash
             docker-compose up --build
 Explanation: This builds the Docker image and runs the project in a containerized environment.
 
-uvicorn app.main:app --reload :
+### Run command  : uvicorn app.main:app --reload :
+
 ![Screenshot (1293)](https://github.com/user-attachments/assets/303052ab-2891-4569-8b99-9776a1cd4401)
 
 ## 📹 Live Project Walkthrough
@@ -96,17 +97,12 @@ uvicorn app.main:app --reload :
 ![Screenshot (1294)](https://github.com/user-attachments/assets/75729f8b-418a-4268-92a5-10eae698410a)
 
 
-Swagger UI: http://127.0.0.1:8000/docs
-Redoc UI: http://127.0.0.1:8000/redoc
-2. Run with Docker
-bash
-Copy code
-docker-compose up --build
-🤝 Contributing
+
+## 🤝 Contributing
 Contributions are welcome!
 To contribute:
 
-Fork the repository.
+#### Fork the repository.
 Create a new branch: git checkout -b feature/your-feature-name.
 Commit your changes: git commit -m "Add some feature".
 Push to the branch: git push origin feature/your-feature-name.
