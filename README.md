@@ -7,6 +7,9 @@
             FastAPI
             Uvicorn
             SQLAlchemy
+ - Backend: FastAPI
+ - Deployment: Docker + Render
+ - Language: Python 3.9
             
 API Documentation
             Visit [Website](https://event-triggerx-app.onrender.com/) for the interactive Swagger UI.
@@ -16,13 +19,15 @@ The application provides an interactive API documentation using Swagger UI. To a
 Ensure the application is running locally with the command:
 
                         uvicorn app.main:app --reload
-Open your browser and navigate to:
+#### Deployment
 
-                        Swagger UI: http://localhost:8000/docs
-                        ReDoc: http://localhost:8000/redoc
-                        
-                        If running on a different machine, replace localhost with your machine's IP address. For example:
-                        http://<your-ip-address>:8000/docs
+            Platform: Render
+            Live URL: https://event-triggerx-app.onrender.com/
+### Cost
+
+            Deployed on Render Free Tier: $0/month.
+            Usage: 5 queries/day, 24x7 runtime.
+
 
 ##### Note: Ensure that the required ports are open and accessible on the network for external access
 
