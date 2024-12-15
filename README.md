@@ -64,7 +64,7 @@ Ensure the application is running locally with the command:
 ## 🚀 Setup Instructions
 ![Screenshot (1296)](https://github.com/user-attachments/assets/fac07f0b-a1a5-4f02-b418-b3289948967a)
 
-
+## Installation
 ## Step 1: Clone the Repository
             Download the project source code to your local system.
             
