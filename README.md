@@ -7,8 +7,24 @@
             FastAPI
             Uvicorn
             SQLAlchemy
+            
 API Documentation
             Visit http://127.0.0.1:8000/docs for the interactive Swagger UI.
+            
+The application provides an interactive API documentation using Swagger UI. To access it:
+
+Ensure the application is running locally with the command:
+
+                        uvicorn app.main:app --reload
+Open your browser and navigate to:
+
+                        Swagger UI: http://localhost:8000/docs
+                        ReDoc: http://localhost:8000/redoc
+                        
+                        If running on a different machine, replace localhost with your machine's IP address. For example:
+                        http://<your-ip-address>:8000/docs
+
+##### Note: Ensure that the required ports are open and accessible on the network for external access
 
 
 ### 📚Table of Contents
