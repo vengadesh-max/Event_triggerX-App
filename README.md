@@ -61,9 +61,6 @@ Ensure the application is running locally with the command:
        Auto-Deletion: Deletes expired logs after a set time.
        API Documentation: Integrated Swagger UI with FastAPI.
 
-
-![Screenshot (1292)](https://github.com/user-attachments/assets/026058fe-8733-44a1-ab82-f7af60975073)
-
 ## 🚀 Setup Instructions
 ![Screenshot (1296)](https://github.com/user-attachments/assets/fac07f0b-a1a5-4f02-b418-b3289948967a)
 
