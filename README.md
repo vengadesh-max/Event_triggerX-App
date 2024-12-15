@@ -88,7 +88,7 @@ uvicorn is the server that runs the FastAPI app.
             docker run -p 9000:8000 event_triggerx-app
 Explanation: This builds the Docker image and runs the project in a containerized environment.
 
-### Run command  : uvicorn app.main:app --reload :
+### Fast API Run command  : uvicorn app.main:app --reload :
 
 ![Screenshot (1293)](https://github.com/user-attachments/assets/303052ab-2891-4569-8b99-9776a1cd4401)
 
