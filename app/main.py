@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+from fastapi.responses import HTMLResponse
 
 
 # Correct imports
@@ -44,9 +45,21 @@ def read_root():
     """
     Root endpoint of the application.
     """
-    return {"message": "Welcome to the Event Trigger!"}
-
-
-if __name__ == "__main__":
-
-    uvicorn.run("main:app", host="0.0.0.0", port=8000)
+    return HTMLResponse(
+        content="""
+    <html>
+        <head>
+            <title>Welcome</title>
+        </head>
+        <body style="text-align: center; margin-top: 20%;">
+            <h1>Welcome to the Event Trigger Platform!</h1>
+            <p>Click the button below to visit the API Documentation.</p>
+            <a href="https://event-triggerx-app.onrender.com/docs" target="_blank">
+                <button style="font-size: 16px; padding: 10px 20px; cursor: pointer;">
+                    Go to API Docs
+                </button>
+            </a>
+        </body>
+    </html>
+    """
+    )
