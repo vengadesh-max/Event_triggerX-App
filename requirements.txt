@@ -1,0 +1,7 @@
+fastapi==0.111.0
+uvicorn==0.29.0
+pydantic==2.7.1
+SQLAlchemy==2.0.30
+python-multipart==0.0.9   # To handle form-data if needed
+sqlite-utils==3.36.0      # For SQLite interaction
+httpx==0.27.0             # To make API calls for testing triggers
