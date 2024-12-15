@@ -9,7 +9,7 @@
             SQLAlchemy
             
 API Documentation
-            Visit http://127.0.0.1:8000/docs for the interactive Swagger UI.
+            Visit [Website](https://event-triggerx-app.onrender.com/) for the interactive Swagger UI.
             
 The application provides an interactive API documentation using Swagger UI. To access it:
 
