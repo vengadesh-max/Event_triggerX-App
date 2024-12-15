@@ -23,7 +23,7 @@ Ensure the application is running locally with the command:
 
             Platform: Render
             Live URL: https://event-triggerx-app.onrender.com/
-### Cost
+#### Cost
 
             Deployed on Render Free Tier: $0/month.
             Usage: 5 queries/day, 24x7 runtime.
