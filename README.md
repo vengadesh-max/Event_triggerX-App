@@ -18,7 +18,7 @@ The application provides an interactive API documentation using Swagger UI. To a
 
 Ensure the application is running locally with the command:
 
-                        uvicorn app.main:app --reload
+            uvicorn app.main:app --reload
 #### Deployment
 
             Platform: Render
