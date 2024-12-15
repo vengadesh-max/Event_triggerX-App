@@ -1,6 +1,16 @@
 # 🚀 Event TriggerX
 
-#### A modern FastAPI-based event trigger system for scheduling, logging, and managing event workflows.
+#### A comprehensive platform to manage and log event triggers through APIs and scheduled jobs. Built with FastAPI, the platform supports seamless event logging and trigger management while adhering to RESTful principles.
+
+#### Tech Stack
+            Python
+            FastAPI
+            Uvicorn
+            SQLAlchemy (or your database solution)
+API Documentation
+            Visit http://127.0.0.1:8000/docs for the interactive Swagger UI.
+
+
 ### 📚Table of Contents
       Overview
       Project Structure
@@ -92,9 +102,6 @@ Explanation: This builds the Docker image and runs the project in a containerize
 
 ![Screenshot (1293)](https://github.com/user-attachments/assets/303052ab-2891-4569-8b99-9776a1cd4401)
 
-## 📹 Live Project Walkthrough
-[https://youtu.be/eNDIlcZbdws](https://github.com/user-attachments/assets/1e80e88b-b7bb-453e-840c-7b3e8eefc425
-)
 
 ## Next step : add \docs to the local hosted link = > 
 
@@ -104,77 +111,108 @@ Explanation: This builds the Docker image and runs the project in a containerize
 
 
 ## 📌 API Endpoints
-### 1. Trigger Management
+#### Root
+##### GET /
+Returns a welcome message.
 
-        Create a Trigger
-            Method: POST
-            Endpoint: /api/triggers/
-            Description: Add a new trigger.
-            Payload Example:
-            json
-            {
-              "name": "Daily Backup",
-              "trigger_type": "schedule",
-              "schedule_time": "2024-06-15T10:00:00",
-              "interval_seconds": 86400,
-              "api_payload": {"key": "value"}
-            }
-            
-Retrieve All Triggers
+Sample Response:
 
-            Method: GET
-            Endpoint: /api/triggers/
-            Description: Fetch all triggers.
-            
-Retrieve Trigger by ID
+                  json
+                  {
+                      "message": "Welcome to the Event Trigger Platform!"
+                  }
+                  
+##### Triggers API
+                GET /triggers
+Fetch all available triggers.
 
-            Method: GET
-            Endpoint: /api/triggers/{trigger_id}
-            Description: Get a specific trigger by ID.
-            
-Update a Trigger
+Sample Response:
 
-            Method: PUT
-            Endpoint: /api/triggers/{trigger_id}
-            Description: Update an existing trigger.
-            
-##### Payload Example:
-            json
-            {
-              "name": "Updated Trigger Name",
-              "interval_seconds": 3600
-            }
-            
-Delete a Trigger
+                  json
+                  [
+                      {
+                          "id": 1,
+                          "name": "Daily Email Trigger",
+                          "type": "Scheduled",
+                          "status": "Active"
+                      },
+                      {
+                          "id": 2,
+                          "name": "User Signup Trigger",
+                          "type": "API",
+                          "status": "Inactive"
+                      }
+                  ]
+##### POST
+                  
+                  POST /triggers
+Create a new trigger.
 
-            Method: DELETE
-            Endpoint: /api/triggers/{trigger_id}
-            Description: Delete a trigger by ID.
-            
-### 2. Event Logs Management
- Retrieve Active Event Logs
+                  Sample Request:
+                  
+                  json
+                  {
+                      "name": "New Trigger",
+                      "type": "API",
+                      "status": "Active"
+                  }
+Sample Response:
 
-              Method: GET
-              Endpoint: /api/event_logs/
-              Description: Fetch logs that are currently active.
-              
-  Retrieve Archived Event Logs
+                  json
+                  {
+                      "id": 3,
+                      "name": "New Trigger",
+                      "type": "API",
+                      "status": "Active",
+                      "created_at": "2024-12-14T12:34:56Z"
+                  }
+                  
+#### Event Logs API
+                  GET /event_logs
+Retrieve event logs.
 
-              Method: GET
-              Endpoint: /api/event_logs/archived
-              Description: Fetch logs that are archived.
-              
-  Delete Expired Event Logs
+Sample Response:
 
-             Method: DELETE
-             Endpoint: /api/event_logs/expired
-             Description: Remove logs that have expired.
-        
-### 3. Health Check
-         Check API Status
-           Method: GET
-           Endpoint: /
-           Description: A simple endpoint to confirm that the API is running.
+                  json
+                  [
+                      {
+                          "id": 1,
+                          "event": "User Login",
+                          "timestamp": "2024-12-14T08:00:00Z",
+                          "details": "User logged in successfully."
+                      },
+                      {
+                          "id": 2,
+                          "event": "Data Backup",
+                          "timestamp": "2024-12-14T10:00:00Z",
+                          "details": "Backup completed for dataset XYZ."
+                      }
+                  ]
+### POST             
+                       POST /event_logs
+Log a new event.
+
+Sample Request:
+
+                  json
+                  {
+                      "event": "System Alert",
+                      "details": "CPU usage exceeded threshold."
+                  }
+Sample Response:
+
+                  json
+                  {
+                      "id": 3,
+                      "event": "System Alert",
+                      "timestamp": "2024-12-14T12:45:00Z",
+                      "details": "CPU usage exceeded threshold."
+                  }
+
+## 📹 Live Project Walkthrough
+[https://youtu.be/eNDIlcZbdws](https://github.com/user-attachments/assets/1e80e88b-b7bb-453e-840c-7b3e8eefc425
+)
+
 
 ## 📧 Contact
 If you have any questions, feel free to reach out:
