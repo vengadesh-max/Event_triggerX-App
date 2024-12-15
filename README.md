@@ -79,8 +79,13 @@ uvicorn is the server that runs the FastAPI app.
             Swagger UI: http://127.0.0.1:8000/docs
             Redoc UI: http://127.0.0.1:8000/redoc
 ## Step 6: Run with Docker :
+
+![Screenshot (1298)](https://github.com/user-attachments/assets/98485114-54ba-4120-a64b-1531b8911eb5)
+
             If you prefer running the project in a Docker container:
             docker-compose up --build
+            or
+            docker run -p 9000:8000 event_triggerx-app
 Explanation: This builds the Docker image and runs the project in a containerized environment.
 
 ### Run command  : uvicorn app.main:app --reload :
