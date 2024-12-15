@@ -159,6 +159,8 @@ Sample Response:
                           "status": "Inactive"
                       }
                   ]
+![Screenshot (1299)](https://github.com/user-attachments/assets/ca41f0bc-2601-43f4-ad8b-7be2cacf8df3)
+
 ##### POST
                   
                   POST /triggers
@@ -182,7 +184,8 @@ Sample Response:
                       "status": "Active",
                       "created_at": "2024-12-14T12:34:56Z"
                   }
-                  
+![Screenshot (1300)](https://github.com/user-attachments/assets/9a9c08d9-94ac-4064-a40f-4cadb22bfcee)
+
 #### Event Logs API
                   GET /event_logs
 Retrieve event logs.
@@ -224,10 +227,19 @@ Sample Response:
                       "timestamp": "2024-12-14T12:45:00Z",
                       "details": "CPU usage exceeded threshold."
                   }
+![Screenshot (1302)](https://github.com/user-attachments/assets/bebc52a0-9f26-42ca-b557-5b5d6d27d2ce)
 
+Swagger UI
 ## 📹 Live Project Walkthrough
 [https://youtu.be/eNDIlcZbdws](https://github.com/user-attachments/assets/1e80e88b-b7bb-453e-840c-7b3e8eefc425
 )
+
+ReDoc
+## 📹 Live Project Walkthrough
+[https://youtu.be/eNDIlcZbdws](
+https://github.com/user-attachments/assets/012186de-d38f-4e06-88d4-995000ea03fe
+)
+
 
 
 ## 📧 Contact
