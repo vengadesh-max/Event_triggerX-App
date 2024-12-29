@@ -246,7 +246,7 @@ https://github.com/user-attachments/assets/012186de-d38f-4e06-88d4-995000ea03fe
 
 ## 📧 Contact
 If you have any questions, feel free to reach out:
-📧 Your Email: bvengadesh25504@gmail.com
+📧 Email: bvengadesh25504@gmail.com
 
 ⭐ Show Your Support
 If you liked this project, please give it a ⭐ on GitHub!
